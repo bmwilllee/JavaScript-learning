@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fileForm</title>
+	<script type="text/javascript">
+		var f = document.getElementById('test-file-upload');
+		var filename = f.value;
+		function submitFile(){
+		if (!filename || !(filename.endsWith('.jpg') || filename.endsWith('.png') || filename.endsWith('.gif'))) {
+    alert('Can only upload image file.');
+    return false;
+	}
+}
+	</script>
+</head>
+
+<body>
+<form enctype="multipart/from-data" method="post" id="test-file-upload">
+	<input type="file" name="uploadFile">
+	<input type="button" name="submit" onclick="submitFile()" value="submit">
+</form>
+</body>
+</html>
+
+
