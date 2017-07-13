@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fromOperation</title>
+	<script>
+function checkForm(){
+	var input_pwd = document.getElementById('input-password');
+	var md5_pwd = document.getElementById('md5-password');
+	//	把用户输入的铭文变成MD5:
+	md5_pwd.value = toMD5(input_pwd.value);
+	// 继续下一步：
+	return true;
+}
+}
+</script>
+</head>
+
+<body>
+	<form id="login-form" method="post" onsubmit="return checkForm()">
+    <input type="text" id="username" name="username">
+    <input type="password" id="input-password">
+    <input type="hidden" id="md5-password" name="password">
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
