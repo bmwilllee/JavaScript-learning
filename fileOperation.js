@@ -56,7 +56,7 @@ fileInput.addEventListener('change', function () {
     reader.onload = function(e) {
         var
             data = e.target.result; // 'data:image/jpeg;base64,/9j/4AAQSk...(base64编码)...'            
-        preview.style.backgroundImage = 'url(' + data + ')';
+        	preview.style.backgroundImage = 'url(' + data + ')';
     };
     // 以DataURL的形式读取文件:
     reader.readAsDataURL(file);
